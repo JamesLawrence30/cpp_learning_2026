@@ -1,8 +1,7 @@
 # First repo on my new Mac. Windows, I'll miss you (for a little while).
 
-### Readers note I have Fn (Globe) and Cmd swapped so the keypad is still familiar...
-
 ## VS Code setup:
+### Readers note I have Fn (Globe) and Cmd swapped so the keypad is still familiar...
 ### Build:
 * Fn+Shift+B
 * Runs default build from tasks.json
@@ -18,6 +17,6 @@
 ### Disable Inline Suggestions:
 * Fn+Shift+P
 * Preferences: Open User Settings (JSON)
-"[cpp]": {\
-    "editor.inlineSuggest.enabled": false\
-}\
+* "[cpp]": {
+&nbsp;"editor.inlineSuggest.enabled": false\
+}
