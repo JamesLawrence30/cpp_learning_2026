@@ -1,0 +1,9 @@
+# build outputs
+*/build/
+
+# macOS debug symbol bundles
+*.dSYM/
+
+# compiled binaries
+*.out
+*.o

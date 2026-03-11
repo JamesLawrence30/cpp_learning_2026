@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "name": "Run hello_world",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/hello_world/build/main",
+      "cwd": "${workspaceFolder}",
+      "MIMode": "lldb",
+      "preLaunchTask": "build hello_world",
+      "externalConsole": false
+    }
+  ]
+}
