@@ -8,7 +8,12 @@ namespace jim {
         grow_array();
         ~grow_array();
 
-        int size();
         void push_back(int n);
+
+        int& operator[](int i);
+
+        int size() const;
+        void stats() const;
+        void print() const;
     };
 };
