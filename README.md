@@ -17,6 +17,6 @@
 ### Disable Inline Suggestions:
 * Fn+Shift+P
 * Preferences: Open User Settings (JSON)
-"[cpp]": {\
-&nbsp;"editor.inlineSuggest.enabled": false\
+* "[cpp]": {\
+&#9;"editor.inlineSuggest.enabled": false\
 }
