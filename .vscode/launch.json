@@ -7,8 +7,16 @@
       "program": "${workspaceFolder}/hello_world/build/main",
       "cwd": "${workspaceFolder}",
       "MIMode": "lldb",
-      "preLaunchTask": "build hello_world",
-      "externalConsole": false
+      "preLaunchTask": "build hello_world"
+    },
+    {
+      "name": "Run grow_array",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/grow_array/build/main",
+      "cwd": "${workspaceFolder}",
+      "MIMode": "lldb",
+      "preLaunchTask": "build grow_array"
     }
   ]
 }

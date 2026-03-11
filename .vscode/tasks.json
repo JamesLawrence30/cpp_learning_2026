@@ -13,10 +13,31 @@
         "hello_world/build/main"
       ],
       "group": {
-        "kind": "build",
-        "isDefault": true
+        "kind": "build"
       },
       "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "build grow_array",
+      "type": "shell",
+      "command": "clang++",
+      "args": [
+        "-std=c++20",
+        "-O0",
+        "-g",
+        "-I",
+        "grow_array/include",
+        "grow_array/src/*.cpp",
+        "-o",
+        "grow_array/build/main"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build"
+      }
     }
   ]
 }
