@@ -1,4 +1,4 @@
-# First repo on my new Mac. Windows, I'll miss you (for a little while).
+## First repo on my new Mac. Windows, I'll miss you (for a little while).
 
 ## VS Code setup:
 ### Readers note I have Fn (Globe) and Cmd swapped so the keypad is still familiar...
@@ -17,6 +17,6 @@
 ### Disable Inline Suggestions:
 * Fn+Shift+P
 * Preferences: Open User Settings (JSON)
-* "[cpp]": {
+"[cpp]": {\
 &nbsp;"editor.inlineSuggest.enabled": false\
 }
