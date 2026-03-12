@@ -1,7 +1,7 @@
 #include "grow_array.hpp"
 
 #include <iostream>
-#include <utility>
+#include <stdexcept>
 
 using namespace jim;
 
