@@ -8,9 +8,16 @@ namespace jim {
         grow_array();
         ~grow_array();
 
-        void push_back(int n);
+        grow_array(const grow_array& other); // creating new object from existing
+        grow_array(grow_array&& other) noexcept; // steal buffer from other and reset other
 
-        int& operator[](int i);
+        grow_array& operator=(const grow_array& other); // overwrite existing object with deep copy of another
+        grow_array& operator=(grow_array&& other) noexcept; // transfer ownership of resources from another object
+
+        int& operator[](int i); // modify
+        const int& operator[](int i) const; // read-only
+
+        void push_back(int n);
 
         int size() const;
         void stats() const;
