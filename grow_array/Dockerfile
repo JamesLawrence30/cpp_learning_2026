@@ -1,4 +1,4 @@
-FROM gcc:14-bookworm AS builder
+FROM gcc:12-bookworm AS builder
 WORKDIR /app
 
 COPY include/ include/
