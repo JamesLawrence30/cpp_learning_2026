@@ -19,6 +19,7 @@
 
 ## Docker: commands
     docker build -t grow-array:dev .
+    docker compose build tick_server
 
     docker run grow-array:dev
     docker run --rm grow-array:dev
