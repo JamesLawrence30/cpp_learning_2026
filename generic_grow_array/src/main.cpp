@@ -20,7 +20,64 @@ public:
         delete[] container_;
     }
 
-    void push_back(T val) {
+    generic_grow_array(const generic_grow_array& other)
+    :
+    capacity_(other.capacity_),
+    size_(other.size_),
+    container_((other.size() == 0) ? nullptr : new T[other.capacity_])
+    {
+        for (int i=0; i < other.size_; i++) {
+            container_[i] = other.container_[i];
+        }
+    }
+
+    generic_grow_array(generic_grow_array&& other)
+    :
+    capacity_(other.capacity_),
+    size_(other.size_),
+    container_(other.container_)
+    {
+        other.container_ = nullptr;
+        other.size_ = 0;
+        other.capacity_ = 0;
+    }
+
+    generic_grow_array& operator=(const generic_grow_array& other) {
+        if (&other == this) {
+            return *this;
+        }
+
+        T* temp = (other.capacity_ == 0) ? nullptr : new T[other.capacity_];
+        for (int i=0; i<other.size_; i++) {
+            temp[i] = other.container_[i];
+        }
+
+        delete[] container_;
+        container_ = temp;
+        capacity_ = other.capacity_;
+        size_ = other.size_;
+
+        return *this;
+    }
+
+    generic_grow_array& operator=(generic_grow_array&& other) {
+        if (&other == this) {
+            return *this;
+        }
+
+        delete[] container_;
+        container_ = other.container_;
+        capacity_ = other.capacity_;
+        size_ = other.size_;
+
+        other.container_ = nullptr;
+        other.size_ = 0;
+        other.capacity_ = 0;
+
+        return *this;
+    }
+
+    void push_back(const T& val) {
         if (size_==capacity_) {
             int new_capacity = (capacity_ == 0) ? 1 : capacity_ * 2;
             
@@ -38,7 +95,7 @@ public:
         size_++;
     }
 
-    T operator[](int i) {
+    T& operator[](int i) {
         if (i < 0 || i >= size_)
             throw std::out_of_range("Out of range");
         else
@@ -62,7 +119,7 @@ public:
 
     void print() {
         for (int i=0; i<size_; i++) {
-            std::cout << container_[i] << std::endl;
+            std::cout << container_[i] << " ";
         }
         std::cout << std::endl;
     }
